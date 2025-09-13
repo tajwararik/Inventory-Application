@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title><%= instrument.name %></title>
+  </head>
+
+  <body>
+    <h1><%= instrument.name %></h1>
+    <p><strong>Category: </strong><%= instrument.category_name%></p>
+    <p><strong>Brand: </strong><%= instrument.brand_name%></p>
+    <p><strong>Quantity: </strong><%= instrument.quantity%></p>
+    <p><strong>Price: </strong><%= instrument.price%></p>
+    <p><strong>Condition: </strong><%= instrument.condition%></p>
+    <% if(instrument.serial_number) { %>
+    <p><strong>Serial Number: </strong><%= instrument.serial_number%></p>
+    <% } %>
+
+    <form
+      action="/instruments/<%= instrument.id%>/delete"
+      method="post"
+      style="display: inline"
+    >
+      <button
+        type="submit"
+        onclick="confirm('Do you want to delete <%= instrument.name%>?')"
+      >
+        Delete
+      </button>
+    </form>
+    <a href="/instruments">Back</a>
+  </body>
+</html>

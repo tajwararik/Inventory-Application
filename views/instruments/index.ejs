@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Instruments</title>
+  </head>
+
+  <body>
+    <h1>Instruments</h1>
+
+    <a href="/instruments/form">Create new instrument</a>
+
+    <ul>
+      <% instruments.forEach(instrument => { %>
+      <li>
+        <a href="/instruments/<%= instrument.id %>"><%= instrument.name %></a> |
+        <a href="/instruments/<%= instrument.id %>/edit">Edit</a>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
