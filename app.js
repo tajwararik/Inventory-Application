@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("node:path");
 const instrumentsRoutes = require("./routes/instrumentsRoutes");
+const categoriesRoutes = require("./routes/categoriesRoutes");
+const brandsRoutes = require("./routes/brandsRoutes");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 3000;
@@ -17,6 +19,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/instruments", instrumentsRoutes);
+app.use("/categories", categoriesRoutes);
+app.use("/brands", brandsRoutes);
 
 app.listen(PORT, (error) => {
   if (error) throw error;
