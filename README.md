@@ -14,10 +14,6 @@ Users can:
 - Delete instruments, categories brands
 - Information are saved into database
 
-## Link
-
-- [Live url](https://github.com/tajwararik/Inventory-Application)
-
 ## Built with
 
 - Express
