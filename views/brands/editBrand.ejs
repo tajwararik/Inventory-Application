@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Edit</title>
+  </head>
+
+  <body>
+    <h1>Edit Brand</h1>
+
+    <form action="/brands/<%= brand.id%>" method="post">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value="<%= brand.name%>"
+        required
+      />
+      <br /><br />
+
+      <label for="country">Country: </label>
+      <input
+        type="text"
+        id="country"
+        name="country"
+        value="<%= brand.country%>"
+      />
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <a href="/brands">Back</a>
+  </body>
+</html>

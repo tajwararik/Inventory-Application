@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Categories</title>
+  </head>
+
+  <body>
+    <h1>Categories</h1>
+
+    <a href="/categories/form">Create new category</a>
+
+    <ul>
+      <% categories.forEach(category => { %>
+      <li>
+        <a href="/categories/<%= category.id %>"><%= category.name %></a> |
+        <a href="/categories/<%= category.id %>/edit">Edit</a>
+      </li>
+      <% }) %>
+    </ul>
+
+    <a href="/">Back</a>
+  </body>
+</html>

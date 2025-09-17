@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Brands</title>
+  </head>
+
+  <body>
+    <h1>Brands</h1>
+
+    <a href="/brands/form">Create new brand</a>
+
+    <ul>
+      <% brands.forEach(brand => { %>
+      <li>
+        <a href="/brands/<%= brand.id %>"><%= brand.name %></a> |
+        <a href="/brands/<%= brand.id %>/edit">Edit</a>
+      </li>
+      <% }) %>
+    </ul>
+
+    <a href="/">Back</a>
+  </body>
+</html>

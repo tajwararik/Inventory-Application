@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title><%= category.name %></title>
+  </head>
+
+  <body>
+    <h1><%= category.name %></h1>
+    <p><strong>Description: </strong><%= category.description %></p>
+
+    <h3>Instruments in <%= category.name %> category</h3>
+
+    <ul>
+      <% instruments.forEach(instrument => { %>
+      <li><%= instrument.name%></li>
+      <% }) %>
+    </ul>
+
+    <form
+      action="/categories/<%= category.id%>/delete"
+      method="post"
+      style="display: inline"
+    >
+      <button
+        type="submit"
+        onclick="confirm('Do you want to delete <%= category.name%>?')"
+      >
+        Delete
+      </button>
+    </form>
+    <a href="/categories">Back</a>
+  </body>
+</html>
